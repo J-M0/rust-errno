@@ -68,9 +68,9 @@ impl fmt::Display for Errno {
     }
 }
 
-impl Into<i32> for Errno {
-    fn into(self) -> i32 {
-        self.0
+impl From<Errno> for i32 {
+    fn from(e: Errno) -> i32 {
+        e.0
     }
 }
 
